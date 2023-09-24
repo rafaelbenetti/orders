@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://graphqlzero.almansi.me/api',
+  apiUrl: 'https://api.asapdep.com',
 };

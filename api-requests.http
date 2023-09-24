@@ -1,0 +1,131 @@
+
+@lambda_url = https://api.asapdep.com
+@orderId = 71b789d66cc1453eaf40865450401841
+@customerName = TestCustomer1
+
+# aws cognito-idp admin-initiate-auth --region sa-east-1 --cli-input-json file://token/admin.json
+# aws cognito-idp admin-initiate-auth --region sa-east-1 --cli-input-json file://token/test_customer1.json
+# aws cognito-idp admin-initiate-auth --region sa-east-1 --cli-input-json file://admin.json
+
+@adminToken = eyJraWQiOiJ4TndhVEcxREdkWnhPM2xBcnhScnpmS2RHUTFUZWtWd0FWQmRWT1Y2XC9qUT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzRjMWExYS1jMDcxLTcwZGItZmY5NC02MGZlZjZhNDk5NDQiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuc2EtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3NhLWVhc3QtMV9PZEFaUG9VNjciLCJjbGllbnRfaWQiOiJtNmdnMjdvajJncnEzZmp0cnNnbHVlcHByIiwib3JpZ2luX2p0aSI6ImZjNjM5NmE5LWFlOTgtNDU2YS1hMWQ2LWI2NDA2NjY1MWJjMyIsImV2ZW50X2lkIjoiZTdkMTU5MGUtNjFiZi00NjE5LTljYWQtZTI4ODgwMTA3MGNlIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY5NTU0NTM3NiwiZXhwIjoxNjk1NTU5Nzc2LCJpYXQiOjE2OTU1NDUzNzYsImp0aSI6ImJmN2Y0NGFmLTU0OGQtNDczMy05YjVhLWE1OGZiZmJhMjkwNSIsInVzZXJuYW1lIjoiYXNhcF9hZG1pbiJ9.ujFVUMrjehYsb2w-uYOfMGjyNyz0WC_Bg3oYXMCdqYtuMytQ_mlkixUpmFCyHGIjxjrob9iMUilKQoaNvYh1HwmyWjQ3V9xtUGq1bgUeGpyvAuNqfLycO-aw61Li-9dOyCQ4Wpsz-7hvYsbOZev9WBiVPneKiQcompRRgHp7HYvMvwvC-QH7LMXzMYRLDHS_6d9sx7qsTDvE3qqL7jSPm7wQQso0Hx9PuCWa1hHp3O5RWT03LFFnazHLUeFonC0h-RcRiX4qPau2OmFIiXQQMW2kdf8_TJRCiPDzi0xz59Of-Z2Og4f-PG9vLDj9enK6s_4h3wF3w9B1pbAgFDUR4Q
+@customerToken1 = eyJraWQiOiJ4TndhVEcxREdkWnhPM2xBcnhScnpmS2RHUTFUZWtWd0FWQmRWT1Y2XC9qUT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyM2ZjNWE3YS0wMGUxLTcwMDgtNzgyMC1jYWVlMGUzNDJkNGMiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuc2EtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3NhLWVhc3QtMV9PZEFaUG9VNjciLCJjbGllbnRfaWQiOiJtNmdnMjdvajJncnEzZmp0cnNnbHVlcHByIiwib3JpZ2luX2p0aSI6IjdiNjc1OWIwLTZlNmItNGQxZS04MDNkLWFkZDMxMWUwYTAwZSIsImV2ZW50X2lkIjoiYTNhNjM4ZmYtMzJkNC00NDI3LWE1YjItMzg4MzRiYjVmZTA0IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY5NDU0MjY2NCwiZXhwIjoxNjk0NTU3MDY0LCJpYXQiOjE2OTQ1NDI2NjQsImp0aSI6IjFlZTk3Njg5LTQ2N2EtNGM3YS04NmEzLWJkNjM0MmE5NTA4NyIsInVzZXJuYW1lIjoidGVzdF9jdXN0b21lcl91c2VyIn0.y7jWUUdEkF5c6n2puWAY9rGO64ukWE4czU-qVge9DLJzY09Iad5oKokvIakzO13EGeHKZTLxJcBFB2yTJUepxJomogOfg016f032yocSATkZ_hX1ocMDPHCXu_VC--2PzuBB44AtFRqxtlGvsZWUt3yl_WIVFsdsgoyr9xSz_xF5y3k4XxV2DWLrbV6juqkQGnTaZ6FvdBtZNlXk794AbgtJ37lY7EG6fmfgCCFlrnAL4OzAEVdVFmN6tZy46tQZsUgL3ZDI4u30xh7iojaZwp2Nf1FZpOmrsH2D2QJqc8xF00IMDGtDBBtNQtMpQSipbW9z6JZoMubrnw5a1rNl8Q
+@customerToken2 = eyJraWQiOiJ4TndhVEcxREdkWnhPM2xBcnhScnpmS2RHUTFUZWtWd0FWQmRWT1Y2XC9qUT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3MzljZWEwYS02MGExLTcwMTItMmRiYS01MzgzNDNiYmNhOWQiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuc2EtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3NhLWVhc3QtMV9PZEFaUG9VNjciLCJjbGllbnRfaWQiOiJtNmdnMjdvajJncnEzZmp0cnNnbHVlcHByIiwib3JpZ2luX2p0aSI6ImNhOTg2NzkwLTQ1YWEtNDVmZC1hNWU0LTY4OTg0NWU4MjAyZSIsImV2ZW50X2lkIjoiMzhhOTg1ZmUtMDEzNi00NjQ5LWJlMzMtMTgyZDMyZDZlMzM5IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY5NDU0NzEwOSwiZXhwIjoxNjk0NTYxNTA5LCJpYXQiOjE2OTQ1NDcxMDksImp0aSI6IjM3ZDNmYWUyLWMzNGYtNDY3MC1hZWRiLTk4NGQyMTNmNWExNCIsInVzZXJuYW1lIjoidGVzdF9jdXN0b21lcl91c2VyMiJ9.cH5WLdzye1V20K-lFKCHrzQeSnjd7-lnJTM0fQzUUQEyf8gsl8DyrQGRaNhgk4AiModecVPTzSmcEuqgDDYOm7C2E8qPViWXDcFpDpNwh9XC6N-591LsIyCm9PFFkuFucjegaYjn7Ou2PQId_augKlDJWdbVaJIP06t4xVbRdn71DSDS9ID7krThMd7BgnRJTFPnslk8YKwsa8dwCKpF173sgt0-QqPhIO0qww4tsGrAmvhkMcuO6ZdLWVi6IrobSHcVxSM0Bob-zgbGoLz27lU4AvsTcA9DYSOVX6iLMOsPa4Ub5apTBqP4BxLTVFEN_aZYJUz-XsXwpmUb-Y6MWg
+@customerToken = {{customerToken1}}
+
+### Returns a new order id, doesn't create anything on DB
+# @name createOrderId
+POST {{lambda_url}}/return-orders/admin/order/create-id
+Authorization: Bearer {{adminToken}}
+
+### Creates a new return order on DB, important fields are status and customerName, other fields can be anything non-null
+# @name createNewOrder
+POST {{lambda_url}}/return-orders/admin/order/create
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+    "returnOrderId": "{{orderId}}",
+    "customerName": "{{customerName}}",
+    "s3Keys": [
+        "TestCustomer/test-dir/testimg.png"
+    ],
+    "status": "START_BOM",
+    "returnInfo": {
+        "notaFiscal": "nf123456",
+        "productName": "Produto1",
+        "serialNumber": "sn123456",
+        "description": "alguma descricao",
+        "name": "Eduardo"
+    }
+}
+
+### Gets return order details for the given order id
+# @name getReturnDetails
+GET {{lambda_url}}/return-orders/{{customerName}}/order/{{orderId}}
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+### 
+# @name updateOrderStatus-1ConfirmBom
+POST {{lambda_url}}/return-orders/update-status
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+    "returnOrderId": "{{orderId}}",
+    "updateToStatus": "CONFIRM_BOM"
+}
+
+###
+# @name updateOrderStatus-1ConfirmAvaria
+POST {{lambda_url}}/return-orders/update-status
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+    "returnOrderId": "{{orderId}}",
+    "updateToStatus": "CONFIRM_AVARIA"
+}
+
+###
+# @name updateOrderStatus-2NfEnviada
+POST {{lambda_url}}/return-orders/update-status
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+    "returnOrderId": "{{orderId}}",
+    "updateToStatus": "NF_ENVIADA"
+}
+
+###
+# @name updateOrderStatus-3NfRecebida
+POST {{lambda_url}}/return-orders/update-status
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+    "returnOrderId": "{{orderId}}",
+    "updateToStatus": "NF_RECEBIDA"
+}
+
+### Returns all active orders
+# Query params:
+# status [optional] = active, inactive, a comma separated list of status names
+# returnOrderId and customerName [optional] = Used for pagination. If only one is sent then the value is ignored. The response of this same request returns these two keys under 'startFromKey' if there are more results to be returned
+# @name getOrders-Admin
+GET {{lambda_url}}/return-orders/orders
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+###
+# Same as the above, just using customer bearer token
+# @name getOrders-Customer
+GET {{lambda_url}}/return-orders/orders
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+###
+# When file upload is required invoke this endpoint to return an URL that will be used to upload the file programatically.
+# Some ref https://fourtheorem.com/the-illustrated-guide-to-s3-pre-signed-urls/
+# https://fullstackdojo.medium.com/s3-upload-with-presigned-url-react-and-nodejs-b77f348d54cc
+# @name getUploadUrl
+GET {{lambda_url}}/return-orders/admin/upload-file-url/{{customerName}}/{{orderId}}
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+###
+# @name getStatus
+GET {{lambda_url}}/return-orders/status-options
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+###
+# @name getTokenForUser
+POST {{lambda_url}}/authenticate
+Content-Type: application/json
+
+{
+    "username": "asap_admin",
+    "password": "AsapAdmin!123"
+}
