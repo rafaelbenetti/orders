@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { OrderItemComponent } from './components/order-item/order-item.component';
 import { OrderLoaderComponent } from './components/order-loader/order-loader.component';
 import { OrderPaginatorComponent } from './components/order-paginator/order-paginator.component';
 import { OrderSearchComponent } from './components/order-search/order-search.component';
@@ -17,7 +16,6 @@ import { OrdersComponent } from './pages/orders/orders.component';
   declarations: [
     OrderPaginatorComponent,
     OrderSearchComponent,
-    OrderItemComponent,
     OrderLoaderComponent,
     OrdersComponent,
     OrderDetailsComponent,

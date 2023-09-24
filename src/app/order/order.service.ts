@@ -19,6 +19,8 @@ export class OrderService {
           return {
             ...order,
             id: order.returnOrderId,
+            createdOn: new Date(order.createdOn),
+            updatedOn: new Date(order.updatedOn),
           };
         });
       })

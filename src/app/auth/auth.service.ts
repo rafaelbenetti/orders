@@ -16,9 +16,13 @@ export class AuthService {
     return sessionStorage.getItem('token');
   }
 
-  isUserLoggedIn() {
+  isUserLoggedIn(): boolean {
     const token = sessionStorage.getItem('token');
     return !!token;
+  }
+
+  signout(): void {
+    sessionStorage.clear();
   }
 
   signin(credentials: AuthCredentials): Observable<AuthToken> {

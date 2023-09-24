@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppStoreModule } from './app-store.module';
 import { AppComponent } from './app.component';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { TokenInterceptor } from './shared/interceptors/token.interceptor';
     AppRoutingModule,
     AppStoreModule,
     HttpClientModule,
+    SharedModule,
   ],
   providers: [
     {

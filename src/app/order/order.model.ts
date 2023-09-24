@@ -7,8 +7,8 @@ export interface Order {
   serialNumber: string;
   description?: string;
   name?: string;
-  createdOn: string;
-  updatedOn: string;
+  createdOn: Date;
+  updatedOn: Date;
 }
 
 export interface OrderCreateDto {
