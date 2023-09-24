@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Store } from '@ngrx/store';
 import { Observable, switchMap } from 'rxjs';
 import { Order } from '../../order.model';
-import { selectOrderById } from '../../order.reducer';
+import { OrderService } from '../../order.service';
 
 @Component({
   selector: 'app-order-details',
@@ -13,10 +12,15 @@ import { selectOrderById } from '../../order.reducer';
 export class OrderDetailsComponent {
   order$: Observable<Order | undefined>;
 
-  constructor(private store: Store, private route: ActivatedRoute) {
+  constructor(
+    private route: ActivatedRoute,
+    private orderService: OrderService
+  ) {
     this.order$ = this.route.params.pipe(
       switchMap((params) => {
-        return this.store.select(selectOrderById(params['id']));
+        const customerName = params['customerName'];
+        const orderId = params['id'];
+        return this.orderService.getByNameAndId(customerName, orderId);
       })
     );
   }

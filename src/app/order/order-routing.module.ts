@@ -6,7 +6,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
 
 const routes: Routes = [
   {
-    path: 'view/:id',
+    path: 'view/:customerName/:id',
     component: OrderDetailsComponent,
   },
   {
