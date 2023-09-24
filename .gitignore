@@ -32,6 +32,8 @@ coverage
 # Ignore Angular caching
 .angular
 
+.credentials
+
 # Bower dependency directory (https://bower.io/)
 bower_components
 
