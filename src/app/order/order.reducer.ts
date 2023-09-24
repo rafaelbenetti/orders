@@ -1,5 +1,5 @@
 import { EntityState, createEntityAdapter } from '@ngrx/entity';
-import { createFeature, createReducer, createSelector, on } from '@ngrx/store';
+import { createFeature, createReducer, on } from '@ngrx/store';
 
 import * as OrderActions from './order.action';
 import { Order } from './order.model';
@@ -44,8 +44,3 @@ export const { name, reducer, selectOrderState, selectLoading, selectError } =
 
 export const { selectAll: selectOrders } =
   adapter.getSelectors(selectOrderState);
-
-export const selectOrderById = (orderId: string) =>
-  createSelector(selectOrders, (orders: Order[]) =>
-    orders.find((o) => o.id === orderId)
-  );

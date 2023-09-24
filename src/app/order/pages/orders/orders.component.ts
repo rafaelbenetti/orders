@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { Store, select } from '@ngrx/store';
 import { Subject, combineLatest, debounceTime, map, tap } from 'rxjs';
 import * as OrderActions from '../../order.action';
@@ -14,6 +15,8 @@ interface SearchParams {
   styleUrls: ['./orders.component.scss'],
 })
 export class OrdersComponent {
+  faEye = faEye;
+
   data$ = combineLatest([
     this.store.pipe(select(selectLoading)),
     this.store.pipe(select(selectOrders)),

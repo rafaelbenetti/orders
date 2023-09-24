@@ -81,6 +81,7 @@
             <th scope="col" class="px-6 py-3">Nº Série</th>
             <th scope="col" class="px-6 py-3">Nome</th>
             <th scope="col" class="px-6 py-3">Descrição</th>
+            <th scope="col" class="px-6 py-3">Status</th>
             <th scope="col" class="px-6 py-3">
               <span class="sr-only">Edit</span>
             </th>
@@ -101,12 +102,15 @@
             <td class="px-6 py-4">{{ order.serialNumber }}</td>
             <td class="px-6 py-4">{{ order.name }}</td>
             <td class="px-6 py-4">{{ order.description }}</td>
+            <td class="px-6 py-4">
+              <app-order-status [status]="order.status"></app-order-status>
+            </td>
             <td class="px-6 py-4 text-right">
               <a
                 [routerLink]="['/orders/view', order.name, order.id]"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >Visualizar</a
-              >
+                class="font-medium text-gray-600"
+                ><fa-icon class="fa-2x" [icon]="['fas', 'eye']"></fa-icon
+              ></a>
             </td>
           </tr>
         </tbody>

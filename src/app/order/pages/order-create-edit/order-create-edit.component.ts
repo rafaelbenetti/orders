@@ -3,9 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
 import * as OrderActions from '../../order.action';
-import { selectOrderById } from '../../order.reducer';
 
 @Component({
   selector: 'app-order-create-edit',
@@ -23,21 +21,7 @@ export class OrderCreateEditComponent {
     private store: Store,
     private route: ActivatedRoute,
     private router: Router
-  ) {
-    this.route.params
-      .pipe(
-        switchMap((params) => {
-          this.orderId = params['id'];
-          return this.store.select(selectOrderById(this.orderId));
-        })
-      )
-      .subscribe((post) => {
-        if (post) {
-          this.orderForm.controls['title'].disable();
-          this.orderForm.patchValue(post);
-        }
-      });
-  }
+  ) {}
 
   onSave(): void {
     const order = this.orderForm.value;
